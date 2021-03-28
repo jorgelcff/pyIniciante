@@ -1,0 +1,12 @@
+a = input("Digite sua frase preferida: ")
+import string
+alfabeto = list(string.ascii_lowercase)
+lista = list()
+a = a.lower()
+for digito in a:
+  digito = digito.lower()
+  for num in range(len(alfabeto)):
+    contagem = digito, a.count(digito)
+    if digito == alfabeto[num] and contagem not in lista:
+      lista.append(contagem) 
+print(lista)
