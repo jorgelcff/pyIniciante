@@ -1,0 +1,11 @@
+import string
+import random
+
+tamanhoSenha = int(input("Quantos digitos irão em sua senha? "))
+cValidos = (string.ascii_letters + string.digits + string.punctuation)
+senha = []
+
+for i in range (tamanhoSenha):
+  senha.append(random.choice(cValidos)) 
+print("".join(senha))
+
