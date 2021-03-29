@@ -1,0 +1,8 @@
+from time import sleep
+
+a = 1 
+b = int(input("Até quantos segundos você quer contar? "))
+
+for i in range (1, b+1):
+   print ("Contagem: ", i, "segundos.")
+   sleep(1)
