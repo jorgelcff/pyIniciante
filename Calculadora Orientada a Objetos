@@ -1,30 +1,45 @@
-class Calculadora:
+class Calculadora: 
+#Crio a classe calculadora.
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
+#Insiro os atributos.
 
     def soma(self):
         return self.a + self.b
+#Defino a ação de somar.
 
     def subtrai(self):
         return self.a - self.b
+ #Defino a ação de subtrair.        
 
     def multiplica(self):
         return self.a * self.b
+#Defino a ação de multiplicar.       
 
     def divide(self):
         return self.a / self.b
+#Defino a ação de dividir.     
 
 a = int(input("Digite seu primeiro valor: "))
 b = int(input("Digite seu segundo valor: "))
+#Peço ao usuário os valores de a e b.
 
 valor = Calculadora (a , b)
 operacao = str(input('Escreva a operação desejada: '))
+#Peço ao usuário a ação desejada.
+
 if operacao == 'soma':
   print('Soma:', valor.soma())
+  
 elif operacao == 'subtração' :
   print('Subtração:', valor.subtrai())
+  
 elif operacao == 'mutiplicação':
   print('Multiplicação:', valor.multiplica())
+  
 elif operacao == 'divisão':
   print('Divisão:', valor.divide())
+  
+#Exibo ao usuário a ação desejada.
