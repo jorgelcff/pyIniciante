@@ -1,0 +1,37 @@
+from random import randint
+
+ppt = ["PEDRA", "PAPEL", "TESOURA"]
+
+computador = ppt[randint(0,2)]
+
+jogador = False
+
+while jogador == False:
+
+    jogador = input("PEDRA, PAPEL OU TESOURA? ")
+    if jogador == computador:
+        print("IGUAL AO COMPUTADOR, REPITA!!")
+
+    elif jogador == "PEDRA":
+        if computador == "PAPEL":
+            print("VOCE PERDEU", computador, "ENGOLE", jogador)
+        else:
+            print("VOCE GANHOU", jogador, "ESMAGA", computador)
+
+    elif jogador == "PAPEL":
+        if computador == "TESOURA":
+            print("VOCE PERDEU...", computador, "CORTA", jogador)
+        else:
+            print("VOCE GANHOU", jogador, "ENGOLE", computador)
+
+    elif jogador == "TESOURA":
+        if computador == "PEDRA":
+            print("VOCE PERDEU...", computador, "ESMAGA", jogador)
+        else:
+            print("VOCE GANHOU", jogador, "CORTA", computador)
+
+    else:
+        print("JOGADA INVALIDA! TENTE NOVAMENTE")
+
+    jogador = False
+    computador = ppt[randint(0,2)]
