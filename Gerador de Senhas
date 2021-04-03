@@ -2,10 +2,19 @@ import string
 import random
 
 tamanhoSenha = int(input("Quantos digitos irão em sua senha? "))
+#Pergunto ao usuário de quantas digitos a sua senha será.
+
 cValidos = (string.ascii_letters + string.digits + string.punctuation)
+#Insiro todos os caracteres possíveis 
+
 senha = []
+#A senha a ser gerada será uma lista.
 
 for i in range (tamanhoSenha):
-  senha.append(random.choice(cValidos)) 
-print("".join(senha))
+#Varro o tamanho da senha.
 
+  senha.append(random.choice(cValidos)) 
+#Atribuio um caracter aleatório a uma posição.
+
+print("".join(senha))
+#Mostro ao usuário a sua senha gerada.
