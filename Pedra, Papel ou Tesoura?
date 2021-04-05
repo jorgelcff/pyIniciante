@@ -1,37 +1,47 @@
 from random import randint
+#Importando a biblioteca de aleatoriedade.
 
 ppt = ["PEDRA", "PAPEL", "TESOURA"]
+#Lista de opções pro usuário.
 
 computador = ppt[randint(0,2)]
+#Escolhendo a opção do computador aleatoriamente. 
 
 jogador = False
 
 while jogador == False:
+#Criando o ciclo de jogo. 
 
     jogador = input("PEDRA, PAPEL OU TESOURA? ")
     if jogador == computador:
         print("IGUAL AO COMPUTADOR, REPITA!!")
+#Se ambas as escolhas forem iguais, mostra-se isso ao usuário
 
     elif jogador == "PEDRA":
         if computador == "PAPEL":
             print("VOCE PERDEU", computador, "ENGOLE", jogador)
         else:
             print("VOCE GANHOU", jogador, "ESMAGA", computador)
+#Caso o usuário escolha pedra.
 
     elif jogador == "PAPEL":
         if computador == "TESOURA":
             print("VOCE PERDEU...", computador, "CORTA", jogador)
         else:
             print("VOCE GANHOU", jogador, "ENGOLE", computador)
+#Caso o usuário escolha papel.
 
     elif jogador == "TESOURA":
         if computador == "PEDRA":
             print("VOCE PERDEU...", computador, "ESMAGA", jogador)
         else:
             print("VOCE GANHOU", jogador, "CORTA", computador)
+#Caso o usuário escolha tesoura.
 
     else:
         print("JOGADA INVALIDA! TENTE NOVAMENTE")
+#Caso o usuário digite algo inválido.
 
     jogador = False
     computador = ppt[randint(0,2)]
+#Continuando o ciclo do jogo.
