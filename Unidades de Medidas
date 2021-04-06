@@ -1,13 +1,16 @@
 a = True
 while a == True:
-
+#Deixando o programa em loop
     uMedida = ['milimetros', 'centimetros', 'metros', 'decametros' ,'quilometros']
+#Criando uma lista das unidades de medidas.
     vMedida = float(input('Insira a o valor da sua medida em metros'))
+#Escolhendo a unidade de medida a ser convertida.
     sConversão1 = (input('Qual a medida final? '))
+#Escolhendo a medida final.
     
     if sConversão1 == sConversão2:
         a = False 
-    
+   
     if sConversão1 == uMedida[0]:
         vMedida = vMedida * 1000 
     elif sConversão1 == uMedida[1]:
@@ -18,9 +21,10 @@ while a == True:
         vMedida = vMedida / 10 
     elif sConversão1 == uMedida[4]:
         vMedida = vMedida / 1000 
-
+#Formas de conversões.
     print(vMedida) 
-    
+#Mostrando a medida final.   
     x =(input('Quer encerrar o programa?'))
     if x == 's':
         a = False
+#Fechando o loop.
